@@ -1,3 +1,3 @@
 protocol NetworkServiceProtocol {
-    func fetchData()
+    func fetchData() -> Any
 }
