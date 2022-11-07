@@ -1,12 +1,12 @@
 import Foundation
 
-struct CompanyNetworkService: NetworkServiceProtocol {
+struct NetworkService {
 
     // MARK: - properties
 
-    let urlSession = URLSession(configuration: .default)
+    private let urlSession = URLSession(configuration: .default)
 
-    // MARK: - NetworkServiceProtocol implementation
+    // MARK: - functions
 
     func fetchData(url: URL, completion: @escaping (Result<Data, Error>) -> Void) {
         urlSession.dataTask(with: url) { data, response, error in
