@@ -27,6 +27,7 @@ class EmployeesViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
+        tableView.register(EmployeesTableViewCell.self, forCellReuseIdentifier: EmployeesTableViewCell.cellID)
         return tableView
     }()
 
@@ -34,6 +35,7 @@ class EmployeesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "loading"
         setupView()
     }
 
@@ -41,7 +43,6 @@ class EmployeesViewController: UIViewController {
 
     private func setupView() {
         view.backgroundColor = .white
-        navigationController?.isNavigationBarHidden = true
         addSubviews()
         addConstraints()
         setupViewModel()
@@ -75,6 +76,7 @@ class EmployeesViewController: UIViewController {
                     self.errorLabel.isHidden = true
                     self.employeesTableView.isHidden = false
                     self.employees = self.viewModel.model?.company.employees
+                    self.title = self.viewModel.model?.company.name ?? "something went wrong"
                     self.employees?.sort(by: <)
                     self.employeesTableView.reloadData()
                 }
@@ -122,16 +124,15 @@ extension EmployeesViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
-        var cellContent = UIListContentConfiguration.cell()
-        let text = employees?[indexPath.row].name ?? ""
-        cellContent.text = text
-        cell.contentConfiguration = cellContent
-        return cell
-    }
 
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        viewModel.model?.company.name ?? ""
+        if let employee = employees?[indexPath.row],
+           let cell = tableView.dequeueReusableCell(withIdentifier: EmployeesTableViewCell.cellID,
+                                                    for: indexPath) as? EmployeesTableViewCell {
+            cell.updateCell(employee)
+            return cell
+        }
+
+        return tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
     }
 
 }
