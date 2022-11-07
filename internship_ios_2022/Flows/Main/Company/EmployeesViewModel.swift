@@ -32,7 +32,7 @@ final class EmployeesViewModel {
 
     // MARK: - functions
 
-    func setData() {
+    private func setData() {
         state = .loading
         let urlString = "https://run.mocky.io/v3/1d1cb4ec-73db-4762-8c4b-0b8aa3cecd4c"
         guard let url = URL(string: urlString) else { return }

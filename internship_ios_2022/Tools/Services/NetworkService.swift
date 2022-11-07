@@ -16,8 +16,9 @@ struct NetworkService {
             }
             guard let data = data,
                   response != nil else {
-                print("Что-то пошло не так.")
-                return
+                fatalError("Что-то пошло не так." +
+                           "\n data: \(String(describing: data))" +
+                           "\n response: \(String(describing: response))")
             }
             completion(.success(data))
         }.resume()

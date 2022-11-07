@@ -20,6 +20,7 @@ class EmployeesTableViewCell: UITableViewCell {
     private lazy var skillsStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
+        stackView.spacing = 5
         return stackView
     }()
 
@@ -40,9 +41,6 @@ class EmployeesTableViewCell: UITableViewCell {
     private func createLabelWith(text: String) -> UILabel {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            label.heightAnchor.constraint(equalToConstant: 30)
-        ])
         label.text = text
         return label
     }
@@ -65,24 +63,25 @@ class EmployeesTableViewCell: UITableViewCell {
 
         NSLayoutConstraint.activate([
 
-            contentWhiteView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 15),
+            contentWhiteView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 10),
             contentWhiteView.topAnchor.constraint(equalTo: contentView.topAnchor),
             contentWhiteView.rightAnchor.constraint(equalTo: contentView.rightAnchor),
             contentWhiteView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
 
             nameLabel.leftAnchor.constraint(equalTo: contentWhiteView.leftAnchor),
-            nameLabel.topAnchor.constraint(equalTo: contentWhiteView.topAnchor),
+            nameLabel.topAnchor.constraint(equalTo: contentWhiteView.topAnchor, constant: 5),
 
             phoneLabel.leftAnchor.constraint(equalTo: contentWhiteView.leftAnchor),
-            phoneLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor),
+            phoneLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 5),
             phoneLabel.bottomAnchor.constraint(lessThanOrEqualTo: contentWhiteView.bottomAnchor),
 
             skillsLabel.leftAnchor.constraint(equalTo: skillsStackView.leftAnchor, constant: -15),
-            skillsLabel.topAnchor.constraint(equalTo: contentWhiteView.topAnchor),
+            skillsLabel.topAnchor.constraint(equalTo: nameLabel.topAnchor),
 
             skillsStackView.leftAnchor.constraint(equalTo: phoneLabel.rightAnchor, constant: 40),
             skillsStackView.topAnchor.constraint(equalTo: skillsLabel.bottomAnchor),
-            skillsStackView.bottomAnchor.constraint(equalTo: contentWhiteView.bottomAnchor)
+            skillsStackView.rightAnchor.constraint(lessThanOrEqualTo: contentWhiteView.rightAnchor, constant: -10),
+            skillsStackView.bottomAnchor.constraint(equalTo: contentWhiteView.bottomAnchor, constant: -5)
         ])
     }
 }
