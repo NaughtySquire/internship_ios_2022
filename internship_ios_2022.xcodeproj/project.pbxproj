@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		79066BF929191C0B00FC9F08 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79066BF829191C0B00FC9F08 /* AppCoordinator.swift */; };
 		79066BFC29191C3900FC9F08 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79066BFB29191C3900FC9F08 /* MainCoordinator.swift */; };
-		79066BFF29191CAC00FC9F08 /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79066BFE29191CAC00FC9F08 /* CompanyViewController.swift */; };
-		79066C0129191CBA00FC9F08 /* CompanyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79066C0029191CBA00FC9F08 /* CompanyViewModel.swift */; };
-		79066C0329191D1100FC9F08 /* CompanyNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79066C0229191D1100FC9F08 /* CompanyNetworkService.swift */; };
-		79066C0829191DBB00FC9F08 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79066C0729191DBB00FC9F08 /* NetworkServiceProtocol.swift */; };
+		79066BFF29191CAC00FC9F08 /* EmployeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79066BFE29191CAC00FC9F08 /* EmployeesViewController.swift */; };
+		79066C0129191CBA00FC9F08 /* EmployeesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79066C0029191CBA00FC9F08 /* EmployeesViewModel.swift */; };
+		79066C0329191D1100FC9F08 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79066C0229191D1100FC9F08 /* NetworkService.swift */; };
 		79066C0A29191E0C00FC9F08 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79066C0929191E0C00FC9F08 /* CoordinatorProtocol.swift */; };
-		790E89DE291933E7005824AF /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790E89DD291933E7005824AF /* Company.swift */; };
-		790E89E02919357A005824AF /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790E89DF2919357A005824AF /* Employee.swift */; };
+		790E89E229194D15005824AF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790E89E129194D15005824AF /* Model.swift */; };
+		790E89E529195D8C005824AF /* EmployeesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790E89E429195D8C005824AF /* EmployeesTableViewCell.swift */; };
+		790E89E729195DE1005824AF /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790E89E629195DE1005824AF /* Company.swift */; };
+		790E89E929195E04005824AF /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790E89E829195E04005824AF /* Employee.swift */; };
 		7973E64429190D8E00B26890 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7973E64329190D8E00B26890 /* AppDelegate.swift */; };
 		7973E64E29190D8E00B26890 /* internship_ios_2022.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7973E64C29190D8E00B26890 /* internship_ios_2022.xcdatamodeld */; };
 		7973E65029190D9000B26890 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7973E64F29190D9000B26890 /* Assets.xcassets */; };
@@ -26,13 +27,14 @@
 /* Begin PBXFileReference section */
 		79066BF829191C0B00FC9F08 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		79066BFB29191C3900FC9F08 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		79066BFE29191CAC00FC9F08 /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
-		79066C0029191CBA00FC9F08 /* CompanyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewModel.swift; sourceTree = "<group>"; };
-		79066C0229191D1100FC9F08 /* CompanyNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyNetworkService.swift; sourceTree = "<group>"; };
-		79066C0729191DBB00FC9F08 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
+		79066BFE29191CAC00FC9F08 /* EmployeesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewController.swift; sourceTree = "<group>"; };
+		79066C0029191CBA00FC9F08 /* EmployeesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewModel.swift; sourceTree = "<group>"; };
+		79066C0229191D1100FC9F08 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		79066C0929191E0C00FC9F08 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
-		790E89DD291933E7005824AF /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
-		790E89DF2919357A005824AF /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		790E89E129194D15005824AF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		790E89E429195D8C005824AF /* EmployeesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesTableViewCell.swift; sourceTree = "<group>"; };
+		790E89E629195DE1005824AF /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		790E89E829195E04005824AF /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		7973E64029190D8E00B26890 /* internship_ios_2022.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = internship_ios_2022.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7973E64329190D8E00B26890 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7973E64D29190D8E00B26890 /* internship_ios_2022.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = internship_ios_2022.xcdatamodel; sourceTree = "<group>"; };
@@ -88,9 +90,9 @@
 		79066BFD29191C4000FC9F08 /* Company */ = {
 			isa = PBXGroup;
 			children = (
-				79066BFE29191CAC00FC9F08 /* CompanyViewController.swift */,
-				79066C0029191CBA00FC9F08 /* CompanyViewModel.swift */,
-				79066C0229191D1100FC9F08 /* CompanyNetworkService.swift */,
+				790E89E329195D26005824AF /* Views */,
+				79066BFE29191CAC00FC9F08 /* EmployeesViewController.swift */,
+				79066C0029191CBA00FC9F08 /* EmployeesViewModel.swift */,
 			);
 			path = Company;
 			sourceTree = "<group>";
@@ -106,6 +108,7 @@
 		79066C0529191D6E00FC9F08 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				79066C0229191D1100FC9F08 /* NetworkService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -113,7 +116,6 @@
 		79066C0629191D8A00FC9F08 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				79066C0729191DBB00FC9F08 /* NetworkServiceProtocol.swift */,
 				79066C0929191E0C00FC9F08 /* CoordinatorProtocol.swift */,
 			);
 			path = Protocols;
@@ -122,10 +124,19 @@
 		790E89DC291933BC005824AF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				790E89DD291933E7005824AF /* Company.swift */,
-				790E89DF2919357A005824AF /* Employee.swift */,
+				790E89E129194D15005824AF /* Model.swift */,
+				790E89E629195DE1005824AF /* Company.swift */,
+				790E89E829195E04005824AF /* Employee.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		790E89E329195D26005824AF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				790E89E429195D8C005824AF /* EmployeesTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		7973E63729190D8E00B26890 = {
@@ -291,16 +302,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				79066BF929191C0B00FC9F08 /* AppCoordinator.swift in Sources */,
+				790E89E929195E04005824AF /* Employee.swift in Sources */,
 				79066BFC29191C3900FC9F08 /* MainCoordinator.swift in Sources */,
-				79066C0129191CBA00FC9F08 /* CompanyViewModel.swift in Sources */,
-				790E89E02919357A005824AF /* Employee.swift in Sources */,
-				790E89DE291933E7005824AF /* Company.swift in Sources */,
+				79066C0129191CBA00FC9F08 /* EmployeesViewModel.swift in Sources */,
+				790E89E529195D8C005824AF /* EmployeesTableViewCell.swift in Sources */,
 				7973E64429190D8E00B26890 /* AppDelegate.swift in Sources */,
-				79066C0829191DBB00FC9F08 /* NetworkServiceProtocol.swift in Sources */,
 				79066C0A29191E0C00FC9F08 /* CoordinatorProtocol.swift in Sources */,
-				79066BFF29191CAC00FC9F08 /* CompanyViewController.swift in Sources */,
+				79066BFF29191CAC00FC9F08 /* EmployeesViewController.swift in Sources */,
+				790E89E729195DE1005824AF /* Company.swift in Sources */,
+				790E89E229194D15005824AF /* Model.swift in Sources */,
 				7973E64E29190D8E00B26890 /* internship_ios_2022.xcdatamodeld in Sources */,
-				79066C0329191D1100FC9F08 /* CompanyNetworkService.swift in Sources */,
+				79066C0329191D1100FC9F08 /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
