@@ -1,0 +1,3 @@
+protocol NetworkServiceProtocol {
+    func fetchData()
+}
