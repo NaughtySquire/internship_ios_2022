@@ -5,7 +5,7 @@ class MainCoordinator: CoordinatorProtocol {
 
     // MARK: - properties
 
-    let navigationController: UINavigationController
+    private let navigationController: UINavigationController
 
     // MARK: - init
 
