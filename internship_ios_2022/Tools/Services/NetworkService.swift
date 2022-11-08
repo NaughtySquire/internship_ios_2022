@@ -5,7 +5,7 @@ struct NetworkService {
     // MARK: - properties
 
     private let urlSession = URLSession.shared
-    private let cache = URLCache.shared
+//    private let urlCache = URLCache.shared
 
     // MARK: - functions
 
@@ -21,8 +21,8 @@ struct NetworkService {
                            "\n data: \(String(describing: data))" +
                            "\n response: \(String(describing: response))\n")
             }
-            let cachedData = CachedURLResponse(response: response!, data: data)
-            self.cache.storeCachedResponse(cachedData, for: request)
+//            let cachedData = CachedURLResponse(response: response!, data: data)
+//            self.urlCache.storeCachedResponse(cachedData, for: request)
             completion(.success(data))
         }.resume()
     }

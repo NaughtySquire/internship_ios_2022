@@ -47,7 +47,7 @@ class EmployeesViewController: UIViewController {
         addSubviews()
         addConstraints()
         setupViewModel()
-        viewModel.setupData()
+        viewModel.loadData()
     }
 
     private func addSubviews() {
@@ -81,6 +81,7 @@ class EmployeesViewController: UIViewController {
                     self.title = self.viewModel.model?.company.name ?? "something went wrong"
                     self.employees?.sort(by: <)
                     self.employeesTableView.reloadData()
+
                 }
             }
         }
