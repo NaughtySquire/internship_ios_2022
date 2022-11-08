@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let window = UIWindow(frame: UIScreen.main.bounds)
         appCoordinator = AppCoordinator(window: window)
-        appCoordinator?.start()
+                    appCoordinator?.start()
         return true
     }
 //    // MARK: - Core Data stack

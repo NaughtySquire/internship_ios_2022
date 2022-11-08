@@ -4,22 +4,25 @@ struct NetworkService {
 
     // MARK: - properties
 
-    private let urlSession = URLSession(configuration: .default)
+    private let urlSession = URLSession.shared
+    private let cache = URLCache.shared
 
     // MARK: - functions
 
-    func fetchData(url: URL, completion: @escaping (Result<Data, Error>) -> Void) {
-        urlSession.dataTask(with: url) { data, response, error in
+    func fetchData(request: URLRequest, completion: @escaping (Result<Data, Error>) -> Void) {
+        urlSession.dataTask(with: request) { data, response, error in
             if let error = error {
 				completion(.failure(error))
 				    return
             }
             guard let data = data,
                   response != nil else {
-                fatalError("Что-то пошло не так." +
+                fatalError("\n Fatal Error: Что-то пошло не так." +
                            "\n data: \(String(describing: data))" +
-                           "\n response: \(String(describing: response))")
+                           "\n response: \(String(describing: response))\n")
             }
+            let cachedData = CachedURLResponse(response: response!, data: data)
+            self.cache.storeCachedResponse(cachedData, for: request)
             completion(.success(data))
         }.resume()
     }
