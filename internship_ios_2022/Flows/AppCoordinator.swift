@@ -7,24 +7,26 @@ class AppCoordinator: CoordinatorProtocol {
 
     private let window: UIWindow
     private let navigationController: UINavigationController
-
-    private var childCoordinator: CoordinatorProtocol
+    private var childCoordinator: CoordinatorProtocol!
 
     // MARK: - init
 
     init(window: UIWindow) {
         self.window = window
-        childCoordinator = MainCoordinator()
         navigationController = UINavigationController()
     }
 
     // MARK: - functions
 
     func start() {
+        window.rootViewController = navigationController
         goToMainFlow()
+        window.makeKeyAndVisible()
     }
 
     private func goToMainFlow() {
+        childCoordinator = MainCoordinator(navigationController)
+        childCoordinator.start()
     }
 
 }

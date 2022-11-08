@@ -5,17 +5,21 @@ class MainCoordinator: CoordinatorProtocol {
 
     // MARK: - properties
 
+    private let navigationController: UINavigationController
+
     // MARK: - init
 
-    init() {
-
+    init(_ navigationController: UINavigationController) {
+        self.navigationController = navigationController
     }
 
     func start() {
-
+        goToCompany()
     }
 
-    func goToEmployees() {
+    func goToCompany() {
+        let employeesVC = EmployeesViewController()
+        navigationController.pushViewController(employeesVC, animated: false)
     }
 
 }
