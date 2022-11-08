@@ -19,6 +19,7 @@ class EmployeesViewController: UIViewController {
         let label = UILabel()
         label.numberOfLines = 0
         label.textAlignment = .center
+        label.textColor = .red
         return label
     }()
 

@@ -15,10 +15,7 @@
 		79066C0A29191E0C00FC9F08 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79066C0929191E0C00FC9F08 /* CoordinatorProtocol.swift */; };
 		790E89E229194D15005824AF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790E89E129194D15005824AF /* Model.swift */; };
 		790E89E529195D8C005824AF /* EmployeesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790E89E429195D8C005824AF /* EmployeesTableViewCell.swift */; };
-		790E89E729195DE1005824AF /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790E89E629195DE1005824AF /* Company.swift */; };
-		790E89E929195E04005824AF /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790E89E829195E04005824AF /* Employee.swift */; };
 		7973E64429190D8E00B26890 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7973E64329190D8E00B26890 /* AppDelegate.swift */; };
-		7973E64E29190D8E00B26890 /* internship_ios_2022.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7973E64C29190D8E00B26890 /* internship_ios_2022.xcdatamodeld */; };
 		7973E65029190D9000B26890 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7973E64F29190D9000B26890 /* Assets.xcassets */; };
 		7973E65329190D9000B26890 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7973E65129190D9000B26890 /* LaunchScreen.storyboard */; };
 		C6918ECFB720431F6465BE16 /* Pods_internship_ios_2022.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B207ABB1576535377F164B9 /* Pods_internship_ios_2022.framework */; };
@@ -33,11 +30,8 @@
 		79066C0929191E0C00FC9F08 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		790E89E129194D15005824AF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		790E89E429195D8C005824AF /* EmployeesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesTableViewCell.swift; sourceTree = "<group>"; };
-		790E89E629195DE1005824AF /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
-		790E89E829195E04005824AF /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		7973E64029190D8E00B26890 /* internship_ios_2022.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = internship_ios_2022.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7973E64329190D8E00B26890 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7973E64D29190D8E00B26890 /* internship_ios_2022.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = internship_ios_2022.xcdatamodel; sourceTree = "<group>"; };
 		7973E64F29190D9000B26890 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7973E65229190D9000B26890 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7973E65429190D9000B26890 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,7 +58,6 @@
 				7973E64F29190D9000B26890 /* Assets.xcassets */,
 				7973E65129190D9000B26890 /* LaunchScreen.storyboard */,
 				7973E65429190D9000B26890 /* Info.plist */,
-				7973E64C29190D8E00B26890 /* internship_ios_2022.xcdatamodeld */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -125,8 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				790E89E129194D15005824AF /* Model.swift */,
-				790E89E629195DE1005824AF /* Company.swift */,
-				790E89E829195E04005824AF /* Employee.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -302,16 +293,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				79066BF929191C0B00FC9F08 /* AppCoordinator.swift in Sources */,
-				790E89E929195E04005824AF /* Employee.swift in Sources */,
 				79066BFC29191C3900FC9F08 /* MainCoordinator.swift in Sources */,
 				79066C0129191CBA00FC9F08 /* EmployeesViewModel.swift in Sources */,
 				790E89E529195D8C005824AF /* EmployeesTableViewCell.swift in Sources */,
 				7973E64429190D8E00B26890 /* AppDelegate.swift in Sources */,
 				79066C0A29191E0C00FC9F08 /* CoordinatorProtocol.swift in Sources */,
 				79066BFF29191CAC00FC9F08 /* EmployeesViewController.swift in Sources */,
-				790E89E729195DE1005824AF /* Company.swift in Sources */,
 				790E89E229194D15005824AF /* Model.swift in Sources */,
-				7973E64E29190D8E00B26890 /* internship_ios_2022.xcdatamodeld in Sources */,
 				79066C0329191D1100FC9F08 /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,19 +510,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		7973E64C29190D8E00B26890 /* internship_ios_2022.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				7973E64D29190D8E00B26890 /* internship_ios_2022.xcdatamodel */,
-			);
-			currentVersion = 7973E64D29190D8E00B26890 /* internship_ios_2022.xcdatamodel */;
-			path = internship_ios_2022.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 7973E63829190D8E00B26890 /* Project object */;
 }
