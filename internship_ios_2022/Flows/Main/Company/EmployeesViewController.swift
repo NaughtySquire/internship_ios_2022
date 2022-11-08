@@ -81,6 +81,7 @@ class EmployeesViewController: UIViewController {
                     self.title = self.viewModel.model?.company.name ?? "something went wrong"
                     self.employees?.sort(by: <)
                     self.employeesTableView.reloadData()
+
                 }
             }
         }
