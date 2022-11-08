@@ -47,7 +47,7 @@ class EmployeesViewController: UIViewController {
         addSubviews()
         addConstraints()
         setupViewModel()
-        viewModel.setupData()
+        viewModel.loadData()
     }
 
     private func addSubviews() {
