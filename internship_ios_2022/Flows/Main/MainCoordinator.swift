@@ -14,11 +14,12 @@ class MainCoordinator: CoordinatorProtocol {
     }
 
     func start() {
-        goToCompany()
+        showEmployees()
     }
 
-    func goToCompany() {
-        let employeesVC = EmployeesViewController()
+    private func showEmployees() {
+        let employeesVM = EmployeesViewModel()
+        let employeesVC = EmployeesViewController(viewModel: employeesVM)
         navigationController.pushViewController(employeesVC, animated: false)
     }
 

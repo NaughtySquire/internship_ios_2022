@@ -4,8 +4,8 @@ class EmployeesViewController: UIViewController {
 
     // MARK: - properties
 
-    private let viewModel = EmployeesViewModel()
-    private let cellID = "cell"
+    private let viewModel: EmployeesViewModel
+    private let defaultCellId = "defaultCell"
     private var employees: [Employee]?
 
     // MARK: - views
@@ -27,7 +27,7 @@ class EmployeesViewController: UIViewController {
         let tableView = UITableView(frame: .zero, style: .insetGrouped)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: defaultCellId)
         tableView.register(EmployeesTableViewCell.self, forCellReuseIdentifier: EmployeesTableViewCell.cellID)
         return tableView
     }()
@@ -38,6 +38,17 @@ class EmployeesViewController: UIViewController {
         super.viewDidLoad()
         title = "loading"
         setupView()
+    }
+
+    // MARK: - init
+
+    init(viewModel: EmployeesViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     // MARK: - functions
@@ -135,7 +146,7 @@ extension EmployeesViewController: UITableViewDataSource {
             return cell
         }
 
-        return tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
+        return tableView.dequeueReusableCell(withIdentifier: defaultCellId, for: indexPath)
     }
 
 }
